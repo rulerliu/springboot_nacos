@@ -21,7 +21,7 @@ public class ProviderApplication {
 
     @RequestMapping("/getName")
     public String getName() {
-        return name + "---" + common;
+        return name + "---" + common + "---" + DodbConstants.appKey;
     }
 
     public static void main(String[] args) {
