@@ -19,13 +19,17 @@ public class ConsumerApplication {
     @Value("${common}")
     private String common;
 
+    public static void main(String[] args) {
+        SpringApplication.run(ConsumerApplication.class, args);
+    }
+
+    /**
+     * http://localhost:8089/service-consumer/getName
+     * @return
+     */
     @RequestMapping("/getName")
     public String getName() {
         return name + "---" + common;
-    }
-
-    public static void main(String[] args) {
-        SpringApplication.run(ConsumerApplication.class, args);
     }
 
 }

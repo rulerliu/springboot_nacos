@@ -19,6 +19,10 @@ public class ProviderApplication {
     @Value("${common}")
     private String common;
 
+    /**
+     * http://localhost:8088/service-provider/getName
+     * @return
+     */
     @RequestMapping("/getName")
     public String getName() {
         return name + "---" + common + "---" + DodbConstants.appKey;
